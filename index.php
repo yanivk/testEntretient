@@ -53,4 +53,12 @@ Public function getAllClients(Client $client){
 **********************Base de travail********************************
 class changePriceProduct{
 	//ton code ici :D bon courage
+	$client= new Client;
+	$product= new Product;
+
+	$product = $client->getProduct("table");
+	
+	$priceWithoutTax = $product->getPriceWithoutTax();
+	$product->setPriceWithoutTax(12);
+	
 }
