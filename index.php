@@ -52,5 +52,15 @@ Public function getAllClients(Client $client){
 
 **********************Base de travail********************************
 class changePriceProduct{
-	//ton code ici :D bon courage
+	$newPrice = 15;
+
+public function changePrice(Client $client){
+	$TableauClients = getAllClients($client);
+	foreach($TableauClients as $val)
+	{
+		if($val->getStatus() == "changement"){
+			$clients->getProduct()->setPriceWithoutTax($newPrice);	
+		}
+	}
+}
 }
